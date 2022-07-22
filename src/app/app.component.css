@@ -1,0 +1,17 @@
+.badge {
+    display: inline-block;
+    padding: 2px 3px 2px 3px;
+    font-size: 9px;
+    font-weight: 700;
+    line-height: 1;
+    background: #ff623e;
+    color: black;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 2px;
+    transform: translate(-4px, -7px);
+}
+
+a.btn {
+    margin-right: 16px;
+}

@@ -1,0 +1,16 @@
+<div class="d-flex grid-style">
+    <div class="row">
+        <div class="col-3 mt-3" *ngFor="let item of items">
+            <app-item [item]="item"  > </app-item>
+        </div>
+        <div>
+    </div>
+
+</div>
+<div class="desStyle">
+    <h3 >Description</h3>
+    <h5>{{description}}</h5>
+</div>
+
+<!-- (deleteItem)="deleteItem($event)" -->
+<!-- (updateCount)="updateCount($event)" -->

@@ -1,0 +1,19 @@
+.grid-style {
+    width: 93%;
+    margin-left: 20px;
+}
+
+.desStyle {
+    background: #b0a7a7;
+    margin-top: 16px;
+    color: #fff;
+    margin-right: 11px;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 2px 7px 12px #e1dcdc;
+    margin-bottom: 20px;
+    height: calc(100vh - 31vh);
+    margin-left: 23px;
+    width: 61%;
+    margin-right: -44px;
+}

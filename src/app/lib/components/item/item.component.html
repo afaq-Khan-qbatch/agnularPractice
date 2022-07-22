@@ -1,0 +1,16 @@
+<a class="card overflow-hidden" [routerLink]="['/desc', item?._id]">
+    <img src="{{item?.image}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{item?.name}}</h5>
+      <p class="card-text">{{item?.description}}</p>
+  <div class="d-flex justify-content-between">
+  <a class="btn btn-sm btn-primary text-white" (click)="addToCart(item)">Add To Cart</a>
+  <span class="counter-wrapper d-flex ">
+    <span class="span-1" (click)="subtractCount()">-</span>
+    <span  class="span-2">{{count}}</span>
+    <span class="span-3" (click)="addCount()">+</span>
+  </span>
+
+  </div>      
+    </div>
+</a> 

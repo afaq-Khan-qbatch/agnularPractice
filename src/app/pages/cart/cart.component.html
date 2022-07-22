@@ -1,0 +1,27 @@
+<div class="container">
+  <div *ngIf="carts?.length">
+    <div *ngFor="let cart of carts">
+      <div class="row">
+        <div class="col cart-style">
+          {{cart?.name}}
+        </div>
+        <div class="col cart-style">
+          <span class="counter-wrapper d-flex ">
+            <span class="span-1" (click)="subtractCount(cart)">-</span>
+            <span class="span-2">{{cart.quantity}}</span>
+            <span class="span-3" (click)="addCount(cart)">+</span>
+          </span>
+        </div>
+        <div class="col cart-style">
+          {{cart?.price | currency}}
+        </div>
+        <div class="col cart-style">
+          <input type="button" value="Romove" (click)="removeCart(cart)">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="!carts?.length">
+    No Cart Found
+  </div>
+</div>
