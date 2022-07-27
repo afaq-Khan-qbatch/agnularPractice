@@ -20,7 +20,13 @@ import { DragDropComponent } from './pages/drag-drop/drag-drop.component';
 import { NgFileDragDropModule } from  'ng-file-drag-drop';
 import { NgxFileDragDropModule } from 'ngx-file-drag-drop';
 import { RxjsPracticeComponent } from './pages/rxjs-practice/rxjs-practice.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSliderModule } from '@angular/material/slider';
+import {MatIconModule} from '@angular/material/icon';
+import {MatGridListModule} from '@angular/material/grid-list';
+import { MatSelectModule } from '@angular/material/select';
+import { ChartsComponent } from './pages/charts/charts.component';
+import { NgChartsModule } from 'ng2-charts';
 // import { Router } from '@angular/router';
 
 @NgModule({
@@ -35,6 +41,7 @@ import { RxjsPracticeComponent } from './pages/rxjs-practice/rxjs-practice.compo
     HeroFormComponent,
     DragDropComponent,
     RxjsPracticeComponent,
+    ChartsComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,7 +55,12 @@ import { RxjsPracticeComponent } from './pages/rxjs-practice/rxjs-practice.compo
     ReactiveFormsModule,
     NgFileDragDropModule,
     NgxFileDragDropModule,
-    
+    BrowserAnimationsModule,
+    MatSliderModule,
+    MatIconModule,
+    MatGridListModule,
+    MatSelectModule,
+    NgChartsModule
   ],
   providers: [
     DashboardService, 

@@ -29,6 +29,10 @@ const routes: Routes = [
   {
     path: 'rxjspractice',
     component: RxjsPracticeComponent
+  },
+  {
+    path: 'chart',
+    loadChildren: () => import('./pages/charts/chart.module').then(m => m.ChartModule), 
   }
 ];
 

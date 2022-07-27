@@ -1,17 +1,14 @@
 import { 
   Component, 
   OnInit,
-  Output, 
-  EventEmitter, 
-  AfterContentChecked,
-  AfterContentInit
+
 } from '@angular/core';
 import { DashboardService } from 'src/app/lib/services/dashboard/dashboard.service';
-// import { Items } from '../../common/constants/items';
 import { Items } from 'src/app/lib/utils/items';
 import { Store } from '@ngrx/store';
 import { incrementCount } from 'src/app/lib/store/counter.actions';
 import { ActivatedRoute } from '@angular/router';
+import { map, pluck, switchMap } from 'rxjs';
 
 @Component({
   selector: 'app-dashboard',
@@ -33,9 +30,11 @@ export class DashboardComponent implements OnInit /* AfterContentChecked, AfterC
     this._Activatedroute.paramMap.subscribe(params => {
       this.id = params.get('id');
       if (this.id) {
-        this.service.getDescription(this.id).subscribe(res => {
+        this.service.getDescription(this.id).pipe(
+          pluck('description')
+        ).subscribe(res => {
           this.desc = res
-          this.description = this.desc.description
+          this.description = this.desc
         })
       }
     });
@@ -63,13 +62,4 @@ export class DashboardComponent implements OnInit /* AfterContentChecked, AfterC
       .subscribe(response => {
       })
   }
-
-  // ngAfterContentChecked() {
-  //   console.log('ngAfterContentChecked')
-  // }
-
-  // ngAfterContentInit(): void {
-  //   console.log('ngAfterContentInit')
-  // }
-
 }

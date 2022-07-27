@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { DashboardService } from './lib/services';
 import { Store, select } from '@ngrx/store';
 import { setLogin, incrementCount } from './lib/store/counter.actions';
-import { count } from 'rxjs';
 
 @Component({
   selector: 'app-root',
